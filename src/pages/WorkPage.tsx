@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
 import { getWork, getAttributions } from "@/data/api";
 import type { Work } from "@/types/works";
 import type { AttributionsBundle } from "@/types/attributions";
@@ -19,12 +18,15 @@ type LoadState =
   | { status: "not-found" }
   | { status: "error"; origin: FetchOrigin; message: string };
 
+// This build only ever shows one work — the catalogue's dynamic
+// work/:workId route was dropped in favor of serving it straight from "/".
+const FEATURED_WORK_ID = "14286";
+
 function WorkPage() {
-  const { workId } = useParams<{ workId: string }>();
+  const workId = FEATURED_WORK_ID;
   const [state, setState] = useState<LoadState>({ status: "loading" });
 
   useEffect(() => {
-    if (!workId) return;
     let canceled = false;
 
     // define fetching Promises
@@ -63,15 +65,6 @@ function WorkPage() {
       canceled = true; // clean up: if another workId is loaded before this one finishes, we ignore the result of this load to prevent showing the wrong work or an error message from a previous load
     };
   }, [workId]);
-
-  if (!workId) {
-    return (
-      <NotFoundPage
-        title="Work not found"
-        message={`No work exists with ID “${workId}”.`}
-      />
-    );
-  }
 
   if (state.status === "loading") {
     return (
