@@ -37,7 +37,7 @@ export interface CulturalContextDeclaration {
 }
 
 export interface Life {
-  type: "life" | "information" | "activity";
+  type: "life" | "documented" | "activity";
   start: string;
   end: string;
   start_approx: string;

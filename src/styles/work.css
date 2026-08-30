@@ -460,7 +460,7 @@ main.work-layout {
   font-weight: 400;
 }
 
-.artist-column .artist-names-cnt, .artist-context-cnt, {
+.artist-column .artist-names-cnt, .artist-column .artist-context-cnt {
   margin-bottom: var(--space-2xs);
 }
 
