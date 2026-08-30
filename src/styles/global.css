@@ -1,0 +1,217 @@
+@font-face {
+  font-family: "Satoshi";
+  src: url("../assets/fonts/Satoshi/Satoshi-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../assets/fonts/Satoshi/Satoshi-VariableItalic.woff2")
+    format("woff2");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  /* Colors */
+  --color-bg: #2a2a2a;
+  --color-bg-highlight: #343434;
+  --color-text: #e2ded8;
+  --color-text-highlight: #ffffff;
+  --color-text-muted: #9c978f;
+  --color-link-1: #9a87df;
+  --color-link-2: #50a6e3;
+  /* --color-discarded-alt: #9a87df; */
+  --color-accepted: #50e3c2;
+  --color-discarded: #fa9296;
+  --color-accent: #c8a96e;
+
+  /* Typography */
+  --font-sans: "Satoshi", sans-serif;
+  --text-2xs: 0.675rem;
+  --text-xs: 0.75rem;
+  --text-legend: 0.825rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-md: 1.1rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 2rem;
+  --text-3xl: 2.5rem;
+
+  /* Spacing */
+  --space-2xs: 0.125rem;
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-base: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4rem;
+
+  /* Borders */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 20px;
+  --radius-3xl: 24px;
+  --border: 1px solid var(--color-text);
+
+  /* Navigation */
+  --nav-height: 40px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-bg);
+  position: relative;
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  margin: 0;
+}
+
+/* Background noise pattern
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 600'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23a)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 600px 600px;
+  opacity: 0.12;
+  z-index: -1;
+}
+ */
+
+nav {
+  display: flex;
+  height: var(--nav-height);
+  align-items: center;
+  border-bottom: var(--border);
+  padding: 0 var(--space-lg);
+  position: sticky;
+  top: 0;
+  background-color: var(--color-bg);
+  z-index: 100;
+}
+
+nav a {
+  font-weight: 600;
+  font-size: var(--text-lg);
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+footer {
+  display: flex;
+  height: 80px;
+  align-items: center;
+  border-top: var(--border);
+  padding: 0 var(--space-lg);
+  margin-top: var(--space-lg);
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: var(--text-2xl);
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+p {
+  opacity: 0.8;
+}
+
+a:not(nav a) {
+  color: var(--color-text-muted);
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.in-text-a {
+  text-decoration: underline;
+}
+
+a:hover {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.keyword {
+  font-weight: 500;
+  color: var(--color-text-highlight);
+}
+
+.artist-name {
+  color: var(--color-text-muted);
+}
+
+:is(.attributions-table, .artists-life-table)
+  tr:is(:hover, [aria-selected="true"], [aria-expanded="true"])
+  .artist-name {
+  color: var(--color-text);
+}
+
+.external-link, .button-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-xs) var(--space-sm);
+  border: 1px solid var(--color-text-muted);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: var(--text-xs);
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+    width: fit-content;
+}
+
+.external-link svg {
+  width: var(--text-xs);
+  height: var(--text-xs);
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.external-link:hover,
+.external-link:focus-visible,
+.button-link:hover,
+.button-link:focus-visible {
+  background-color: var(--color-bg-highlight);
+  color: var(--color-text);
+  border-color: var(--color-text);
+}
+
+.external-link:hover svg,
+.external-link:focus-visible svg {
+  transform: translate(1px, -1px); /* tiny "out" nudge */
+}
+
+.external-link:focus-visible,
+.button-link:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
