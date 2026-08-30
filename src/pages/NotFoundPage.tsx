@@ -11,11 +11,11 @@ export default function NotFoundPage({
 }: NotFoundPageProps) {
   return (
     <>
-      <title>Work not found</title>
-      <main>
+      <title>{title}</title>
+      <main style={{ padding: "var(--space-lg)" }}>
         <h1>{title}</h1>
         <p>{message}</p>
-        <Link to="/">← Back to search</Link>
+        <Link to="/">← Back</Link>
       </main>
     </>
   );

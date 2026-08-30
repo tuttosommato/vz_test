@@ -19,7 +19,7 @@ export default function ErrorPage() {
     <main style={{ padding: "var(--space-lg)" }}>
       <h1>Something went wrong</h1>
       <p>{message}</p>
-      <Link to="/">← Back to search</Link>
+      <Link to="/">← Back</Link>
     </main>
   );
 }
