@@ -8,7 +8,7 @@ import type { AttributionsBundle } from "@/types/attributions";
 // ---- Configuration ----
 
 const DATA_VERSION = "v1";
-const BASE = `/data/${DATA_VERSION}`;
+const BASE = `${import.meta.env.BASE_URL}data/${DATA_VERSION}`;
 
 // ---- Cache ----
 // We cache the Promise (not just the resolved value) so that concurrent
