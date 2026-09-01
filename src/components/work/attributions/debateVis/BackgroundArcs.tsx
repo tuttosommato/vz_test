@@ -42,7 +42,7 @@ export default function BackgroundArcs() {
             fill={i === 11 ? "var(--color-bg)" : "none"}
             fillOpacity={i === 11 ? 1 : 0}
             stroke="var(--color-text)"
-            strokeOpacity={i === 0 || i === 11 ? 1 : 0.4}
+            strokeOpacity={i === 0 || i === 11 ? 1 : 0.3}
             strokeWidth={i === 0 ? 1.5 : i === 11 ? 1 : 0.4}
             strokeDasharray={i === 0 || i === 11 ? undefined : "6, 8"}
             vectorEffect="non-scaling-stroke"
