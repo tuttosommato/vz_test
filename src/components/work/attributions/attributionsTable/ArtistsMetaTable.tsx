@@ -21,7 +21,7 @@ export default function ArtistsMetaTable({
   workTitle: string;
   currentAttributions: AttributionsBundle;
 }) {
-  // We measure the cellWidth of the "Reason reliability" header cell to adapt the visualization of reasons accordingly
+  // We measure the cellWidth of the "Source authoritativeness" header cell to adapt the visualization of reasons accordingly
   const { ref, width, height } = useMeasuredSize<HTMLTableCellElement>();
 
   const radius = height / 5.85;
@@ -46,7 +46,7 @@ export default function ArtistsMetaTable({
             Artist
           </th>
           <th ref={ref} scope="col" className="reliability-column">
-            Reason reliability
+            Source authoritativeness
           </th>
         </tr>
       </thead>

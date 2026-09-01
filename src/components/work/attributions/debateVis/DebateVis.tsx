@@ -375,7 +375,7 @@ currentAttributions,
           setNewState={setActiveOrdering}
           options={[
             { value: "standard", label: "Catalogue order" },
-            { value: "authoritativeness", label: "By reason reliability" },
+            { value: "authoritativeness", label: "By source authoritativeness" },
           ]}
         />
       </div>

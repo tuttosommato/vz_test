@@ -26,7 +26,7 @@ function AttributionsSection({
         <div className="table-description">
           <h3>Attribution debate</h3>
           <p>
-            {/* Attributing a painting is an interpretive act. Each entry here records who proposed it, whether the Federico Zeri Foundation accepts it today, and how reliable the source was. */}{" "}
+            {/* Attributing a painting is an interpretive act. Each entry here records who proposed it, whether the Federico Zeri Foundation accepts it today, and how authoritative the source was. */}{" "}
             The diagram maps the critical debate while the table below unpacks
             attributions row by row.
             <br />
