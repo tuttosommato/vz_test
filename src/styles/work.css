@@ -350,6 +350,9 @@ body:has(.ranking-explanation-tooltip) #root {
 .debate-vis {
   --dim-opacity: 0.2;
 }
+.debate-vis-cnt svg.debate-vis {
+  overflow: visible;
+}
 
 .debate-vis-ordering-switch {
   display: flex;
