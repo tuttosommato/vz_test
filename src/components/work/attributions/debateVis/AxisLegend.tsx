@@ -84,7 +84,7 @@ export default function AxisLegend() {
               left: tooltipPos.x + 10,
             }}
           >
-            <h4>About source authoritativeness</h4>
+            <h3>About attribution motivations</h3>
             <p className="ranking-explanation-p">
               For each <span className="keyword">attribution</span>, the
               visualisation positions its{" "}

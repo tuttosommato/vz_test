@@ -138,6 +138,12 @@ h1 {
   line-height: 1.15;
 }
 
+h3 {
+  font-size: var(--text-lg);
+  font-weight: 500;
+  line-height: 1.25;
+}
+
 p {
   opacity: 0.8;
 }

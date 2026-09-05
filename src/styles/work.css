@@ -284,8 +284,8 @@ body:has(.ranking-explanation-tooltip) #root {
   font-size: var(--text-xs);
 }
 
-.ranking-explanation-tooltip h4 {
-  font-size: var(--text-md);
+
+.ranking-explanation-tooltip h3 {
   margin-bottom: var(--space-xs);
 }
 
