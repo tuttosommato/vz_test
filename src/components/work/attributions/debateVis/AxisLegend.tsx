@@ -17,7 +17,7 @@ export default function AxisLegend() {
   const handleMouseEnter = () => {
     if (!triggerRef.current) return;
     const bbox = triggerRef.current.getBoundingClientRect();
-    setTooltipPos({ x: bbox.x + bbox.width / 2, y: bbox.y });
+    setTooltipPos({ x: bbox.x + bbox.width, y: bbox.y });
   };
 
   return (
@@ -81,8 +81,7 @@ export default function AxisLegend() {
             className="ranking-explanation-tooltip"
             style={{
               position: "fixed",
-              left: tooltipPos.x + 40,
-              top: tooltipPos.y - 60,
+              left: tooltipPos.x + 10,
             }}
           >
             <h4>About source authoritativeness</h4>
